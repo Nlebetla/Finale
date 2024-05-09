@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+        }
+        
+        .bth{
+            background-color: #00b22e;
+            color: #ffffff;
+            border-radius: 9%;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Payment Form</h2>
+    <form action="submit_handler.php" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="surname">Surname:</label><br>
+        <input type="text" id="surname" name="surname" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="contacts">Contacts:</label><br>
+        <input type="text" id="contacts" name="contacts" required><br><br>
+
+        <p>Payment Method:</p>
+        <input type="radio" id="mpesa" name="payment_method" value="mpesa">
+        <label for="mpesa">M-Pesa</label><br>
+
+        <input type="radio" id="ecocash" name="payment_method" value="ecocash">
+        <label for="ecocash">EcoCash</label><br>
+
+        <input type="radio" id="bank" name="payment_method" value="bank">
+        <label for="bank">Bank</label><br><br>
+
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit" class="bth">
+    </form>
+</body>
+</html>
